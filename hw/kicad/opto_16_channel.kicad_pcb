@@ -3,7 +3,7 @@
   (general
     (links 115)
     (no_connects 0)
-    (area 39.37 31.59 140.970001 139.075001)
+    (area 39.924999 39.924999 255.560003 194.39)
     (thickness 1.6)
     (drawings 9)
     (tracks 170)
@@ -13,6 +13,14 @@
   )
 
   (page A4)
+  (title_block
+    (title OPTO-IO-BOARD)
+    (date 2017-11-11)
+    (rev 1.0)
+    (company 0xd.tech)
+    (comment 1 https://github.com/0xd-projects/OPTO-IO-BOARD)
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -62,7 +70,7 @@
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.2)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements FFFFFFFF)
     (pcbplotparams
       (layerselection 0x011fc_80000001)
       (usegerberextensions true)

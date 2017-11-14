@@ -7,10 +7,13 @@
 #include <EthernetUdp2.h> // UDP library from: bjoern@cs.stanford.edu 12/30/2008
 
 #define DEBUG   0           // debug flag to printout all pins and their value
-#define DEBUG_T 1           // collects and prints timeing data
-#define TX_FREQ 1000          // udp tx freq in Hz
+#define DEBUG_T 0           // collects and prints timeing data
+#define TX_FREQ 60          // udp tx freq in Hz
 #define D_BLINK 500         // number of cycles to hold led high
 #define D_PRINT 9000        // number of cycles between printing of timeing debug
+
+#define TX2     0           // enables second transmit, if both ip's are not on the 
+                            //  network the transmit will time out and delay the code.
 
 Adafruit_MCP23017 mcp;   // Adafruit libary for the MCP23017 
 
@@ -21,14 +24,14 @@ byte mac[] =
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
 
-IPAddress ip(192, 168, 1, 89);     // local ip, gateway and subnet
+IPAddress ip(192, 168, 1, 89);       // local ip, gateway and subnet
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 
-unsigned int localPort = 8888;      // local port to listen on
+unsigned int localPort = 8888;       // local port to listen on
 
-IPAddress ip_r1(192, 168, 1, 118);    // remote ip addresses
-IPAddress ip_r2(192, 168, 1, 22);     // remote ip addresses
+IPAddress ip_r1(192, 168, 1, 88);    // remote ip addresses 1
+IPAddress ip_r2(192, 168, 1, 90);    // remote ip addresses 2
 
 
 #if defined(ESP32)
@@ -178,7 +181,7 @@ void loop()
 
 
 #if DEBUG_T
-    m_t1=micros();
+    m_t1 = micros();
 #endif
 
     var.value =  ~ mcp.readGPIOAB();
@@ -232,11 +235,13 @@ void loop()
     Udp.beginPacket(ip_r1, 55000);
     Udp.write( (char *) &var.value, 2);
     Udp.endPacket();
-  
+
+#if TX2
     // send data to remote 2
-    //Udp.beginPacket(ip_r2, 55001);
-    //Udp.write( (char *) &var.value, 2);
-    //Udp.endPacket();
+    Udp.beginPacket(ip_r2, 55001);
+    Udp.write( (char *) &var.value, 2);
+    Udp.endPacket();
+#endif
 
     int temp_tx_adj = ( int(tx_limit) - int(td_last) );
 
@@ -299,9 +304,11 @@ void loop()
   
       print_delay = D_PRINT;
     }
-  
+
+#endif
   }
 
+#if DEBUG_T
   print_delay--;
   
 #endif
