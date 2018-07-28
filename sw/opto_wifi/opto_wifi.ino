@@ -1,28 +1,23 @@
-#include <Wire.h>
 #include "Adafruit_MCP23017.h"
 
+#include <SPI.h>
+#include <WiFi.h>
+#include <WiFiUdp.h>
 
-#include <SPI.h>          // needed for Arduino versions later than 0018
-#include <Ethernet2.h>
-#include <EthernetUdp2.h> // UDP library from: bjoern@cs.stanford.edu 12/30/2008
-
-#define DEBUG   0           // debug flag to printout all pins and their value
-#define DEBUG_T 0           // collects and prints timeing data
-#define TX_FREQ 30          // udp tx freq in Hz
+#define DEBUG   1           // debug flag to printout all pins and their value
+#define DEBUG_T 1           // collects and prints timeing data
+#define TX_FREQ 100          // udp tx freq in Hz
 #define D_BLINK 500         // number of cycles to hold led high
-#define D_PRINT 9000        // number of cycles between printing of timeing debug
+#define D_PRINT 90000        // number of cycles between printing of timeing debug
 
 #define TX2     0           // enables second transmit, if both ip's are not on the 
                             //  network the transmit will time out and delay the code.
 
 Adafruit_MCP23017 mcp;   // Adafruit libary for the MCP23017 
 
-// Enter a MAC address and IP address for your controller below.
-// The IP address will be dependent on your local network:
-byte mac[] = 
-{
-  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
-};
+// WiFi network name and password:
+const char* ssid     = "C2";
+const char* password = "2smnymbt";
 
 IPAddress ip(192, 168, 1, 89);       // local ip, gateway and subnet
 IPAddress gateway(192, 168, 1, 1);
@@ -33,20 +28,15 @@ unsigned int localPort = 8888;       // local port to listen on
 IPAddress ip_r1(192, 168, 1, 88);    // remote ip addresses 1
 IPAddress ip_r2(192, 168, 1, 90);    // remote ip addresses 2
 
-
-#if defined(ESP32)
-  #define WIZ_CS 33
-#endif
-
 // buffers for receiving and sending data
 char packetBuffer[ 2 ]; //buffer to hold incoming packet,
 
-// An EthernetUDP instance to let us send and receive packets over UDP
-EthernetUDP Udp;
+// An UDP instance to let us send packets over UDP
+WiFiUDP udp;
 
 void setup() 
 {  
-  mcp.begin();      // use default address 0
+  mcp.begin();            // use default address 0
 
   mcp.pinMode( 0, INPUT); // setup discrete pins
   mcp.pinMode( 1, INPUT);
@@ -84,33 +74,40 @@ void setup()
 
   pinMode(13, OUTPUT);  // setup pint 13 led output
 
-
-#if defined(WIZ_RESET)
-  pinMode(WIZ_RESET, OUTPUT);
-  digitalWrite(WIZ_RESET, HIGH);
-  delay(100);
-  digitalWrite(WIZ_RESET, LOW);
-  delay(100);
-  digitalWrite(WIZ_RESET, HIGH);
-#endif
-
   Serial.begin(115200); // setup serial port
   delay(1000);
   
   Serial.println("\nDiscrete setup complete");
   Serial.println("\nStarting Network");
 
-  Ethernet.init(WIZ_CS);
+  if (!WiFi.config(ip, gateway, subnet)) 
+  {
+    Serial.println("STA Failed to configure");
+  }
   
-  // give the ethernet module time to boot up:
-  delay(1000);
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
 
-  // start the Ethernet and UDP:
-  Ethernet.begin(mac, ip);
-  Udp.begin(localPort);
+  WiFi.begin(ssid, password);
 
-  Serial.print("My IP address: ");
-  Serial.println(Ethernet.localIP());
+  while (WiFi.status() != WL_CONNECTED) 
+  {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("");
+  Serial.println("WiFi connected!");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+  Serial.print("ESP Mac Address: ");
+  Serial.println(WiFi.macAddress());
+  Serial.print("Subnet Mask: ");
+  Serial.println(WiFi.subnetMask());
+  Serial.print("Gateway IP: ");
+  Serial.println(WiFi.gatewayIP());
+  Serial.print("DNS: ");
+  Serial.println(WiFi.dnsIP());
   
 }
 
@@ -119,9 +116,7 @@ void setup()
 void loop() 
 {
 
-#if DEBUG_T
   unsigned long m_t1, m_t2, m_t3, m_t4;
-#endif
 
   static unsigned long t_last    = 0;
   static unsigned long t_current = 0;
@@ -179,16 +174,16 @@ void loop()
   if( ( t_temp - t_last - tx_adj ) >= tx_limit )
   {   
 
-
-#if DEBUG_T
     m_t1 = micros();
-#endif
-
     var.value =  ~ mcp.readGPIOAB();
-  
-#if DEBUG_T
     m_t2=micros();
-#endif
+
+    if( ( m_t2 - m_t1 ) < 400 )
+    {
+      Serial.print( "\n ### disc sampple fail \n" );
+      digitalWrite(13, HIGH);                          // turn the LED on
+      delay(10);
+    }
    
     if( var.value != last)
     {
@@ -232,15 +227,15 @@ void loop()
 #endif
     
     // send data to remote 1
-    Udp.beginPacket(ip_r1, 55000);
-    Udp.write( (char *) &var.value, 2);
-    Udp.endPacket();
+    udp.beginPacket(ip_r1, 55000);
+    udp.write( (const uint8_t*) &var.value, 2);
+    udp.endPacket();
 
 #if TX2
     // send data to remote 2
-    Udp.beginPacket(ip_r2, 55001);
-    Udp.write( (char *) &var.value, 2);
-    Udp.endPacket();
+    udp.beginPacket(ip_r2, 55001);
+    udp.write( (const uint8_t*) &var.value, 2);
+    udp.endPacket();
 #endif
 
     int temp_tx_adj = ( int(tx_limit) - int(td_last) );
@@ -267,7 +262,6 @@ void loop()
       
       t_sum    = 0;
       tx_count = 0;
-  
       
       Serial.print("\n TX_FREQ: ");
       Serial.print(TX_FREQ);
