@@ -18,13 +18,13 @@ Folder structure
 
 
 You can find an overview of the Adafruit HUZZAH32 - ESP32 board at the link below.
-: https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/overview
+- https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/overview
 
 You can find an overview of the Adafruit Ethernet FeatherWing at the link below.
-: https://learn.adafruit.com/adafruit-wiz5500-wiznet-ethernet-featherwing/overview
+- https://learn.adafruit.com/adafruit-wiz5500-wiznet-ethernet-featherwing/overview
 
 You can find the MCP23017 data sheet at the link below.
-: https://cdn-shop.adafruit.com/datasheets/mcp23017.pdf
+- https://cdn-shop.adafruit.com/datasheets/mcp23017.pdf
 
 
 To build the code you need to download the following SW :
@@ -33,7 +33,7 @@ To build the code you need to download the following SW :
 - MCP23017: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
 
 To edit the PCB design you can download Kicad at the link below.
-: http://kicad-pcb.org/download/
+- http://kicad-pcb.org/download/
 
 
 ## License
