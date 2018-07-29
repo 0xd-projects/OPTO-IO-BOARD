@@ -4,11 +4,11 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 
-#define DEBUG   1           // debug flag to printout all pins and their value
-#define DEBUG_T 1           // collects and prints timeing data
-#define TX_FREQ 100          // udp tx freq in Hz
+#define DEBUG   0           // debug flag to printout all pins and their value
+#define DEBUG_T 0           // collects and prints timeing data
+#define TX_FREQ 30          // udp tx freq in Hz
 #define D_BLINK 500         // number of cycles to hold led high
-#define D_PRINT 90000        // number of cycles between printing of timeing debug
+#define D_PRINT 90000       // number of cycles between printing of timeing debug
 
 #define TX2     0           // enables second transmit, if both ip's are not on the 
                             //  network the transmit will time out and delay the code.
@@ -16,8 +16,8 @@
 Adafruit_MCP23017 mcp;   // Adafruit libary for the MCP23017 
 
 // WiFi network name and password:
-const char* ssid     = "C2";
-const char* password = "2smnymbt";
+const char* ssid     = "YOUR_SSID";
+const char* password = "YOUR_PASSWORD";
 
 IPAddress ip(192, 168, 1, 89);       // local ip, gateway and subnet
 IPAddress gateway(192, 168, 1, 1);

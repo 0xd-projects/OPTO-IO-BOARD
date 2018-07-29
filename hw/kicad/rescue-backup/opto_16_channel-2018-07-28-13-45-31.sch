@@ -1,6 +1,35 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:opto_16_channel-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +44,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L opto_16_channel-rescue:LTV-847 U3
+L LTV-847 U3
 U 1 1 59F52C61
 P 4200 4750
 F 0 "U3" H 4000 5450 50  0000 L CNN
@@ -26,7 +55,7 @@ F 3 "" H 4200 4650 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L opto_16_channel-rescue:LTV-847 U4
+L LTV-847 U4
 U 1 1 59F52CAA
 P 4200 6250
 F 0 "U4" H 4000 6950 50  0000 L CNN
@@ -37,7 +66,7 @@ F 3 "" H 4200 6150 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L opto_16_channel-rescue:LTV-847 U1
+L LTV-847 U1
 U 1 1 59F52CE4
 P 4200 1500
 F 0 "U1" H 4000 2200 50  0000 L CNN
@@ -48,7 +77,7 @@ F 3 "" H 4200 1400 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L opto_16_channel-rescue:LTV-847 U2
+L LTV-847 U2
 U 1 1 59F52D4B
 P 4200 3050
 F 0 "U2" H 4000 3750 50  0000 L CNN
@@ -59,7 +88,7 @@ F 3 "" H 4200 2950 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L opto_16_channel-rescue:MCP23017 U5
+L MCP23017 U5
 U 1 1 59F52E3B
 P 7800 1650
 F 0 "U5" H 7700 2675 50  0000 R CNN
@@ -70,7 +99,7 @@ F 3 "" H 8050 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR01
+L GNDD #PWR01
 U 1 1 59F52FFF
 P 8150 2750
 F 0 "#PWR01" H 8150 2500 50  0001 C CNN
@@ -81,73 +110,73 @@ F 3 "" H 8150 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R17
+L R R17
 U 1 1 59F53149
 P 9200 1650
 F 0 "R17" V 9280 1650 50  0000 C CNN
-F 1 "3.3K 1/4W" V 9100 1650 50  0000 C CNN
+F 1 "R" V 9200 1650 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 1650 50  0001 C CNN
 F 3 "" H 9200 1650 50  0001 C CNN
 	1    9200 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R18
+L R R18
 U 1 1 59F531C0
 P 9450 1650
 F 0 "R18" V 9530 1650 50  0000 C CNN
-F 1 "3.3K 1/4W" V 9600 1650 50  0000 C CNN
+F 1 "R" V 9450 1650 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9380 1650 50  0001 C CNN
 F 3 "" H 9450 1650 50  0001 C CNN
 	1    9450 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L R R1
 U 1 1 59F53202
 P 3400 900
 F 0 "R1" V 3480 900 50  0000 C CNN
-F 1 "10K 2W" V 3550 900 50  0000 C CNN
+F 1 "R" V 3400 900 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 900 50  0001 C CNN
 F 3 "" H 3400 900 50  0001 C CNN
 	1    3400 900 
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R2
+L R R2
 U 1 1 59F532EF
 P 3400 1200
 F 0 "R2" V 3480 1200 50  0000 C CNN
-F 1 "10K 2W" V 3550 1200 50  0000 C CNN
+F 1 "R" V 3400 1200 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 1200 50  0001 C CNN
 F 3 "" H 3400 1200 50  0001 C CNN
 	1    3400 1200
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R3
+L R R3
 U 1 1 59F53378
 P 3400 1500
 F 0 "R3" V 3480 1500 50  0000 C CNN
-F 1 "10K 2W" V 3550 1500 50  0000 C CNN
+F 1 "R" V 3400 1500 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 1500 50  0001 C CNN
 F 3 "" H 3400 1500 50  0001 C CNN
 	1    3400 1500
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R4
+L R R4
 U 1 1 59F533C8
 P 3400 1800
 F 0 "R4" V 3480 1800 50  0000 C CNN
-F 1 "10K 2W" V 3550 1800 50  0000 C CNN
+F 1 "R" V 3400 1800 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 1800 50  0001 C CNN
 F 3 "" H 3400 1800 50  0001 C CNN
 	1    3400 1800
 	0    1    1    0   
 $EndComp
 $Comp
-L opto_16_channel-rescue:Screw_Terminal_01x08 J1
+L Screw_Terminal_01x08 J1
 U 1 1 59F53B7A
 P 2000 1300
 F 0 "J1" H 2000 1700 50  0000 C CNN
@@ -158,7 +187,7 @@ F 3 "" H 2000 1300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L LED D1
 U 1 1 59F5406E
 P 2700 900
 F 0 "D1" H 2700 1000 50  0000 C CNN
@@ -169,7 +198,7 @@ F 3 "" H 2700 900 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D2
+L LED D2
 U 1 1 59F54193
 P 2700 1200
 F 0 "D2" H 2700 1300 50  0000 C CNN
@@ -180,7 +209,7 @@ F 3 "" H 2700 1200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D3
+L LED D3
 U 1 1 59F541D2
 P 2700 1500
 F 0 "D3" H 2700 1600 50  0000 C CNN
@@ -191,7 +220,7 @@ F 3 "" H 2700 1500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D4
+L LED D4
 U 1 1 59F542B4
 P 2700 1800
 F 0 "D4" H 2700 1900 50  0000 C CNN
@@ -202,7 +231,7 @@ F 3 "" H 2700 1800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR02
+L GNDD #PWR02
 U 1 1 59F55322
 P 4650 2100
 F 0 "#PWR02" H 4650 1850 50  0001 C CNN
@@ -213,7 +242,7 @@ F 3 "" H 4650 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR03
+L GNDD #PWR03
 U 1 1 59F558CD
 P 4650 3600
 F 0 "#PWR03" H 4650 3350 50  0001 C CNN
@@ -224,7 +253,7 @@ F 3 "" H 4650 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR04
+L GNDD #PWR04
 U 1 1 59F56C1B
 P 4750 5300
 F 0 "#PWR04" H 4750 5050 50  0001 C CNN
@@ -235,7 +264,7 @@ F 3 "" H 4750 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR05
+L GNDD #PWR05
 U 1 1 59F56C7F
 P 4700 6850
 F 0 "#PWR05" H 4700 6600 50  0001 C CNN
@@ -248,14 +277,14 @@ $EndComp
 Wire Wire Line
 	4650 2000 4500 2000
 Wire Wire Line
-	4650 1700 4650 2000
+	4650 1700 4650 2100
 Wire Wire Line
 	4500 1700 4650 1700
 Connection ~ 4650 2000
 Wire Wire Line
 	4500 1400 4650 1400
 Wire Wire Line
-	4650 1100 4650 1400
+	4650 1100 4650 2000
 Wire Wire Line
 	4500 1100 4650 1100
 Wire Wire Line
@@ -364,7 +393,7 @@ Connection ~ 4650 3550
 Wire Wire Line
 	4500 2950 4650 2950
 Wire Wire Line
-	4650 2650 4650 2950
+	4650 2650 4650 3600
 Wire Wire Line
 	4500 2650 4650 2650
 Wire Wire Line
@@ -392,51 +421,51 @@ Wire Wire Line
 Wire Wire Line
 	5700 3350 4500 3350
 $Comp
-L Device:R R5
+L R R5
 U 1 1 59F59043
 P 3400 2450
 F 0 "R5" V 3480 2450 50  0000 C CNN
-F 1 "10K 2W" V 3550 2450 50  0000 C CNN
+F 1 "R" V 3400 2450 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 2450 50  0001 C CNN
 F 3 "" H 3400 2450 50  0001 C CNN
 	1    3400 2450
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R6
+L R R6
 U 1 1 59F59049
 P 3400 2750
 F 0 "R6" V 3480 2750 50  0000 C CNN
-F 1 "10K 2W" V 3550 2750 50  0000 C CNN
+F 1 "R" V 3400 2750 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 2750 50  0001 C CNN
 F 3 "" H 3400 2750 50  0001 C CNN
 	1    3400 2750
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R7
+L R R7
 U 1 1 59F5904F
 P 3400 3050
 F 0 "R7" V 3480 3050 50  0000 C CNN
-F 1 "10K 2W" V 3550 3050 50  0000 C CNN
+F 1 "R" V 3400 3050 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 3050 50  0001 C CNN
 F 3 "" H 3400 3050 50  0001 C CNN
 	1    3400 3050
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R8
+L R R8
 U 1 1 59F59055
 P 3400 3350
 F 0 "R8" V 3480 3350 50  0000 C CNN
-F 1 "10K 2W" V 3550 3350 50  0000 C CNN
+F 1 "R" V 3400 3350 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 3350 50  0001 C CNN
 F 3 "" H 3400 3350 50  0001 C CNN
 	1    3400 3350
 	0    1    1    0   
 $EndComp
 $Comp
-L opto_16_channel-rescue:Screw_Terminal_01x08 J2
+L Screw_Terminal_01x08 J2
 U 1 1 59F5905B
 P 2000 2850
 F 0 "J2" H 2000 3250 50  0000 C CNN
@@ -447,7 +476,7 @@ F 3 "" H 2000 2850 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D5
+L LED D5
 U 1 1 59F59061
 P 2700 2450
 F 0 "D5" H 2700 2550 50  0000 C CNN
@@ -458,7 +487,7 @@ F 3 "" H 2700 2450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D6
+L LED D6
 U 1 1 59F59067
 P 2700 2750
 F 0 "D6" H 2700 2850 50  0000 C CNN
@@ -469,7 +498,7 @@ F 3 "" H 2700 2750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D7
+L LED D7
 U 1 1 59F5906D
 P 2700 3050
 F 0 "D7" H 2700 3150 50  0000 C CNN
@@ -480,7 +509,7 @@ F 3 "" H 2700 3050 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D8
+L LED D8
 U 1 1 59F59073
 P 2700 3350
 F 0 "D8" H 2700 3450 50  0000 C CNN
@@ -565,51 +594,51 @@ Wire Wire Line
 Wire Wire Line
 	2300 3250 2200 3250
 $Comp
-L Device:R R9
+L R R9
 U 1 1 59F592A4
 P 3400 4150
 F 0 "R9" V 3480 4150 50  0000 C CNN
-F 1 "10K 2W" V 3550 4150 50  0000 C CNN
+F 1 "R" V 3400 4150 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 4150 50  0001 C CNN
 F 3 "" H 3400 4150 50  0001 C CNN
 	1    3400 4150
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L R R10
 U 1 1 59F592AA
 P 3400 4450
 F 0 "R10" V 3480 4450 50  0000 C CNN
-F 1 "10K 2W" V 3550 4450 50  0000 C CNN
+F 1 "R" V 3400 4450 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 4450 50  0001 C CNN
 F 3 "" H 3400 4450 50  0001 C CNN
 	1    3400 4450
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R11
+L R R11
 U 1 1 59F592B0
 P 3400 4750
 F 0 "R11" V 3480 4750 50  0000 C CNN
-F 1 "10K 2W" V 3550 4750 50  0000 C CNN
+F 1 "R" V 3400 4750 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 4750 50  0001 C CNN
 F 3 "" H 3400 4750 50  0001 C CNN
 	1    3400 4750
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12
+L R R12
 U 1 1 59F592B6
 P 3400 5050
 F 0 "R12" V 3480 5050 50  0000 C CNN
-F 1 "10K 2W" V 3550 5050 50  0000 C CNN
+F 1 "R" V 3400 5050 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 5050 50  0001 C CNN
 F 3 "" H 3400 5050 50  0001 C CNN
 	1    3400 5050
 	0    1    1    0   
 $EndComp
 $Comp
-L opto_16_channel-rescue:Screw_Terminal_01x08 J3
+L Screw_Terminal_01x08 J3
 U 1 1 59F592BC
 P 2000 4550
 F 0 "J3" H 2000 4950 50  0000 C CNN
@@ -620,7 +649,7 @@ F 3 "" H 2000 4550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D9
+L LED D9
 U 1 1 59F592C2
 P 2700 4150
 F 0 "D9" H 2700 4250 50  0000 C CNN
@@ -631,7 +660,7 @@ F 3 "" H 2700 4150 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D10
+L LED D10
 U 1 1 59F592C8
 P 2700 4450
 F 0 "D10" H 2700 4550 50  0000 C CNN
@@ -642,7 +671,7 @@ F 3 "" H 2700 4450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D11
+L LED D11
 U 1 1 59F592CE
 P 2700 4750
 F 0 "D11" H 2700 4850 50  0000 C CNN
@@ -653,7 +682,7 @@ F 3 "" H 2700 4750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D12
+L LED D12
 U 1 1 59F592D4
 P 2700 5050
 F 0 "D12" H 2700 5150 50  0000 C CNN
@@ -738,51 +767,51 @@ Wire Wire Line
 Wire Wire Line
 	2300 4950 2200 4950
 $Comp
-L Device:R R13
+L R R13
 U 1 1 59F59567
 P 3400 5650
 F 0 "R13" V 3480 5650 50  0000 C CNN
-F 1 "10K 2W" V 3550 5650 50  0000 C CNN
+F 1 "R" V 3400 5650 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 5650 50  0001 C CNN
 F 3 "" H 3400 5650 50  0001 C CNN
 	1    3400 5650
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R14
+L R R14
 U 1 1 59F5956D
 P 3400 5950
 F 0 "R14" V 3480 5950 50  0000 C CNN
-F 1 "10K 2W" V 3550 5950 50  0000 C CNN
+F 1 "R" V 3400 5950 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 5950 50  0001 C CNN
 F 3 "" H 3400 5950 50  0001 C CNN
 	1    3400 5950
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R15
+L R R15
 U 1 1 59F59573
 P 3400 6250
 F 0 "R15" V 3480 6250 50  0000 C CNN
-F 1 "10K 2W" V 3550 6250 50  0000 C CNN
+F 1 "R" V 3400 6250 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 6250 50  0001 C CNN
 F 3 "" H 3400 6250 50  0001 C CNN
 	1    3400 6250
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R16
+L R R16
 U 1 1 59F59579
 P 3400 6550
 F 0 "R16" V 3480 6550 50  0000 C CNN
-F 1 "10K 2W" V 3550 6550 50  0000 C CNN
+F 1 "R" V 3400 6550 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 6550 50  0001 C CNN
 F 3 "" H 3400 6550 50  0001 C CNN
 	1    3400 6550
 	0    1    1    0   
 $EndComp
 $Comp
-L opto_16_channel-rescue:Screw_Terminal_01x08 J4
+L Screw_Terminal_01x08 J4
 U 1 1 59F5957F
 P 2000 6050
 F 0 "J4" H 2000 6450 50  0000 C CNN
@@ -793,7 +822,7 @@ F 3 "" H 2000 6050 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D13
+L LED D13
 U 1 1 59F59585
 P 2700 5650
 F 0 "D13" H 2700 5750 50  0000 C CNN
@@ -804,7 +833,7 @@ F 3 "" H 2700 5650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D14
+L LED D14
 U 1 1 59F5958B
 P 2700 5950
 F 0 "D14" H 2700 6050 50  0000 C CNN
@@ -815,7 +844,7 @@ F 3 "" H 2700 5950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D15
+L LED D15
 U 1 1 59F59591
 P 2700 6250
 F 0 "D15" H 2700 6350 50  0000 C CNN
@@ -826,7 +855,7 @@ F 3 "" H 2700 6250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D16
+L LED D16
 U 1 1 59F59597
 P 2700 6550
 F 0 "D16" H 2700 6650 50  0000 C CNN
@@ -913,12 +942,12 @@ Wire Wire Line
 Wire Wire Line
 	4750 5250 4500 5250
 Wire Wire Line
-	4750 4950 4750 5250
+	4750 4950 4750 5300
 Wire Wire Line
 	4500 4950 4750 4950
 Connection ~ 4750 5250
 Wire Wire Line
-	4750 4350 4750 4650
+	4750 4350 4750 5250
 Wire Wire Line
 	4500 4350 4750 4350
 Wire Wire Line
@@ -927,7 +956,7 @@ Wire Wire Line
 	4700 6450 4500 6450
 Connection ~ 4700 6750
 Wire Wire Line
-	4700 5850 4700 6150
+	4700 5850 4700 6850
 Wire Wire Line
 	4500 5850 4700 5850
 Wire Wire Line
@@ -985,11 +1014,11 @@ Wire Wire Line
 Wire Wire Line
 	8300 2250 8500 2250
 Wire Wire Line
-	8300 1950 9200 1950
+	8300 1950 10500 1950
 Wire Wire Line
-	8300 2050 9450 2050
+	8300 2050 10350 2050
 $Comp
-L opto_16_channel-rescue:esp_32_board U6
+L esp_32_board U6
 U 1 1 59F56087
 P 7200 5100
 F 0 "U6" H 7900 7050 60  0000 C CNN
@@ -1105,24 +1134,25 @@ Wire Wire Line
 	4650 3250 4650 3550
 Connection ~ 4650 3250
 Wire Wire Line
-	9450 750  9450 900 
+	9450 750  9450 1500
 Wire Wire Line
 	10150 750  9450 750 
+Connection ~ 9450 750 
 Wire Wire Line
 	7800 650  7800 550 
 Wire Wire Line
-	7800 550  8800 550 
+	7800 550  9100 550 
 Wire Wire Line
 	9100 550  9100 900 
 Wire Wire Line
 	9100 900  9450 900 
 Connection ~ 9450 900 
 $Comp
-L Device:R R19
+L R R19
 U 1 1 59F644AC
 P 8800 800
 F 0 "R19" V 8880 800 50  0000 C CNN
-F 1 "10K 1/4W" V 8700 800 50  0000 C CNN
+F 1 "R" V 8800 800 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8730 800 50  0001 C CNN
 F 3 "" H 8800 800 50  0001 C CNN
 	1    8800 800 
@@ -1140,7 +1170,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 850  8300 850 
 $Comp
-L power:GNDD #PWR06
+L GNDD #PWR06
 U 1 1 59F67058
 P 9450 2900
 F 0 "#PWR06" H 9450 2650 50  0001 C CNN
@@ -1155,22 +1185,22 @@ Wire Wire Line
 Wire Wire Line
 	6850 3650 6850 3000
 $Comp
-L Device:C C1
+L C C1
 U 1 1 59F677F3
 P 9050 2650
 F 0 "C1" H 9075 2750 50  0000 L CNN
-F 1 "100 nF" H 9000 2450 50  0000 L CNN
+F 1 "C" H 9075 2550 50  0000 L CNN
 F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 9088 2500 50  0001 C CNN
 F 3 "" H 9050 2650 50  0001 C CNN
 	1    9050 2650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C2
+L CP C2
 U 1 1 59F678D6
 P 9950 2650
 F 0 "C2" H 9975 2750 50  0000 L CNN
-F 1 "10 uF" H 9950 2450 50  0000 L CNN
+F 1 "CP" H 9975 2550 50  0000 L CNN
 F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 9988 2500 50  0001 C CNN
 F 3 "" H 9950 2650 50  0001 C CNN
 	1    9950 2650
@@ -1183,7 +1213,7 @@ Wire Wire Line
 Wire Wire Line
 	10150 2500 10150 750 
 Wire Wire Line
-	9050 2800 9450 2800
+	9050 2800 9950 2800
 Wire Wire Line
 	9450 2800 9450 2900
 Wire Wire Line
@@ -1193,15 +1223,15 @@ Wire Wire Line
 Wire Wire Line
 	8750 3650 8750 2750
 Wire Wire Line
-	8750 2750 8500 2750
+	8750 2750 7800 2750
 Wire Wire Line
-	8500 2250 8500 2350
+	8500 2250 8500 2750
 Connection ~ 8500 2750
 Connection ~ 8150 2750
 Connection ~ 8500 2350
 Connection ~ 8500 2450
 $Comp
-L opto_16_channel-rescue:LM1117-3.3 U7
+L LM1117-3.3 U7
 U 1 1 59F6B977
 P 9450 2500
 F 0 "U7" H 9300 2625 50  0000 C CNN
@@ -1212,50 +1242,10 @@ F 3 "" H 9450 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 2500 9050 2500
+	8850 2500 9150 2500
 Connection ~ 9050 2500
 Wire Wire Line
-	9750 2500 9950 2500
+	9750 2500 10150 2500
 Connection ~ 9950 2500
 Connection ~ 9450 2800
-Wire Wire Line
-	4650 2000 4650 2100
-Wire Wire Line
-	4650 3550 4650 3600
-Wire Wire Line
-	4750 5250 4750 5300
-Wire Wire Line
-	4700 6750 4700 6850
-Wire Wire Line
-	9450 1050 9450 1500
-Wire Wire Line
-	9200 1950 10500 1950
-Wire Wire Line
-	9450 2050 10350 2050
-Wire Wire Line
-	4750 4650 4750 5250
-Wire Wire Line
-	4650 2950 4650 3250
-Wire Wire Line
-	4650 1400 4650 2000
-Wire Wire Line
-	4700 6150 4700 6450
-Wire Wire Line
-	9450 900  9450 1050
-Wire Wire Line
-	8800 550  9100 550 
-Wire Wire Line
-	8500 2750 8150 2750
-Wire Wire Line
-	8150 2750 7800 2750
-Wire Wire Line
-	8500 2350 8500 2450
-Wire Wire Line
-	8500 2450 8500 2750
-Wire Wire Line
-	9050 2500 9150 2500
-Wire Wire Line
-	9950 2500 10150 2500
-Wire Wire Line
-	9450 2800 9950 2800
 $EndSCHEMATC

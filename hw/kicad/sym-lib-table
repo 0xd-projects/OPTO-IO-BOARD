@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name opto_16_channel-rescue)(type Legacy)(uri ${KIPRJMOD}/opto_16_channel-rescue.lib)(options "")(descr ""))
+)

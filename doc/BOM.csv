@@ -1,0 +1,19 @@
+ID,Value,Type,P#,Link
+R1 - R16,10K @ 2W,Resistor,CCF0210K0JKR36,https://www.mouser.com/ProductDetail/Vishay-Dale/CCF0210K0JKR36?qs=%2fha2pyFaduhQQlkx8gAirsSRcdQ4O36%2fuiEM3NQSVzgX8sNPVTNrLQ%3d%3d
+R17 - R18,3.3K @ 1/4 W,Resistor,,
+R19,10K @ 1/4W,Resistor,,
+D1 - D16,LED ,Green LED,WP383GDT,https://www.mouser.com/ProductDetail/604-WP383GDT?r=604-WP383GDT
+D1 - D16,LED ,Yellow LED,WP383YDT,https://www.mouser.com/ProductDetail/604-WP383YDT?r=604-WP383YDT
+D1 - D16,LED ,Red LED,WP513IDT,https://www.mouser.com/ProductDetail/604-WP513IDT?r=604-WP513IDT
+D1 - D16,LED ,Red LED,WP113HDT,https://www.mouser.com/ProductDetail/604-WP113HDT?r=604-WP113HDT
+U1 - U4,Opto-Isolator,Transistor Output Optocouplers Optocplr Phototrans 4-CHNL,LTV-847,https://www.mouser.com/ProductDetail/Lite-On/LTV-847?qs=sGAEpiMZZMteimceiIVCBx3Y662pemTNEFNr76lpuig%3d
+U5, I/O Expanders,Interface - I/O Expanders 16bit Input/Output Exp I2C interface,MCP23017-E/SP,https://www.mouser.com/ProductDetail/Microchip-Technology/MCP23017-E-SP?qs=sGAEpiMZZMtLck3p7ZBovcWu3APnHHes
+U6,HUZZAH32 ESP32,Adafruit HUZZAH32 ESP32 Feather Board - with Stacking Headers,Adafruit-3619,https://www.mouser.com/ProductDetail/Adafruit/3619?qs=sGAEpiMZZMve4%2fbfQkoj%252bM6Wn7SMQ86Auq63IE6Yqe0%3d
+U6,Optional,Ethernet FeatherWing,Adafruit-3201,https://www.mouser.com/ProductDetail/Adafruit/3201?qs=%2fha2pyFadug4H%2fpiu4uI1ie%252bhcdOOMz3c67zfQs21n9DOolQ%252bFJCNQ%3d%3d
+U7,3.3 V Voltate Regulator,LDO Voltage Regulators 800MA LDO LINEAR REG,LM1117T-3.3/NOPB,https://www.mouser.com/ProductDetail/Texas-Instruments/LM1117T-33-NOPB?qs=sGAEpiMZZMvu8NZDyZ4K0WKzueYELT5z
+C1,100 nF,Capacitor,,
+C2,10 uF,Capacitor,,
+Optional,9.6 V,Optional Input Zener Diode,"BZX79-C9V1,113",https://www.mouser.com/ProductDetail/771-BZX79-C9V1113?r=771-BZX79-C9V1113
+Optional,19.1 V,Optional Input Zener Diode,"BZX79-C18,113",https://www.mouser.com/ProductDetail/771-BZX79-C18113?r=771-BZX79-C18113
+J1 - J4,,Terminal Block,282834-8,https://www.mouser.com/ProductDetail/TE-Connectivity/282834-8?qs=sGAEpiMZZMvZTcaMAxB2AJ%2f79sE4hFAYU%252bBsIbEgqNg%3d
+J1 - J4,,Terminal Block,"20pcs/lot E-Simpo 2.54mm PCB Screw Terminal Block, 2.54mm 150V6A CE Rohs UL (2.54MM 8P)",https://www.amazon.com/20pcs-Simpo-2-54mm-Terminal-150V6A/dp/B01LF9HS22/ref=sr_1_fkmr1_3?ie=UTF8&qid=1532805786&sr=8-3-fkmr1&keywords=2.54mm%2BPlug-in%2BScrew%2BTerminal%2BBlock&th=1
