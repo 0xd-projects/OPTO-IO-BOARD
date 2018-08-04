@@ -1,5 +1,6 @@
 ID,Value,Type,P#,Link
-R1 - R16,10K @ 2W,Resistor,CCF0210K0JKR36,https://www.mouser.com/ProductDetail/Vishay-Dale/CCF0210K0JKR36?qs=%2fha2pyFaduhQQlkx8gAirsSRcdQ4O36%2fuiEM3NQSVzgX8sNPVTNrLQ%3d%3d
+R1 - R16,10K @ 2 W,Optional Resistor,CCF0210K0JKR36,https://www.mouser.com/ProductDetail/Vishay-Dale/CCF0210K0JKR36?qs=%2fha2pyFaduhQQlkx8gAirsSRcdQ4O36%2fuiEM3NQSVzgX8sNPVTNrLQ%3d%3d
+R1 - R16,10K @ 1/2 W,Resistor,,
 R17 - R18,3.3K @ 1/4 W,Resistor,,
 R19,10K @ 1/4W,Resistor,,
 D1 - D16,LED ,Green LED,WP383GDT,https://www.mouser.com/ProductDetail/604-WP383GDT?r=604-WP383GDT

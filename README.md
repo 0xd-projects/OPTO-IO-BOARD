@@ -6,7 +6,7 @@ The board was designed to provide a large input voltage range.  The input circui
 
 If you would like to change the voltage level trigger you can add a Zener diode in series to the input circuit.  The Zener diode will increase the input level trigger by it's value + approximately 5V.  So, if you want to trigger at say 20V you can put a 15V Zener diode in series on the input.
 
-The input voltage is limited by 10K resistor at 2W and the max steady state current rating of the input diodes ( Typically 20ma ).  At 40V input there is approximately only 3.6 ma of current going through the input circuit this is far below the 20ma max at around 4W.  The input was rated at 40V as a very conservative limit not knowing what conditions the circuit would be used in.  The real 50% max input threshold is approximately 105V at around 1W, however this voltage is not recommended as it can be dangerous and the components are not all rated for this voltage.
+The input voltage is limited by 10K resistor at 1/2W and the max steady state current rating of the input diodes ( Typically 20ma ).  At 40V input there is only approximately 3.66ma of current at 0.133W going through the input circuit this is far below the LED's 20ma max at around 4W.  The input was rated at 40V ( approximately 27% load ) as a very conservative limit not knowing what conditions the circuit would be used in.  The real 50% max input threshold is approximately 53.4V at around 1/4W and 5ma.  The 100% load is approximately 74V at around 1/2W and 7ma.
 
 
 Folder structure
