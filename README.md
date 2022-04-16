@@ -33,7 +33,7 @@ To build the code you need to download the following SW :
 - MCP23017: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
 
 To edit the PCB design you can download Kicad at the link below.
-- http://kicad-pcb.org/download/
+- https://www.kicad.org/
 
 
 ## License
